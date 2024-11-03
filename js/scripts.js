@@ -85,3 +85,20 @@ search.addEventListener('click', function (){
          }
  } )
 
+    window.onload = function() {
+        const article = document.querySelector('#sec-0 article.article-animate');
+        article.classList.add('show');
+    };
+    window.onscroll = function() {
+        const article = document.querySelector('#sec-0 article.article-animate');
+        const articlePosition = article.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.5;
+        if (articlePosition < screenPosition) {
+            article.classList.add('show');
+        }
+    }
+
+    window.addEventListener("load", function() {
+        const article = document.querySelector('#sec-1 article');
+        article.classList.add('show'); // Trigger fade-in effect
+    });

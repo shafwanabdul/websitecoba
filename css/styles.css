@@ -29,6 +29,7 @@ html {
     margin: 0px auto;
     padding: 0px;
 }
+
 /* SECTION ZERO = LANDING VIEW */
 #sec-0{
     background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../Images/banner.jpg) no-repeat top center/cover;
@@ -149,19 +150,35 @@ html {
 #sec-0 input:checked + nav {
     display: block;
 }
-#sec-0 article{
+/* Add this CSS to your stylesheet */
+
+/* Initial state for the article */
+#sec-0 article.article-animate {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Move it slightly down */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transition effects */
+}
+
+/* Final state for the article */
+#sec-0 article.article-animate.show {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
+/* Your existing styles below */
+#sec-0 article {
     display: flex;
     align-items: center;
     text-align: center;
     padding: 3rem 0px;
 }
-#sec-0 article h1{
+#sec-0 article h1 {
     font-weight: normal;
     font-size: 1.25rem;
     color: var(--txtaccent);
     margin-bottom: 10px;
 }
-#sec-0 article h2{
+#sec-0 article h2 {
     text-transform: uppercase;
     font-size: 1.85rem;
     color: var(--txtaccent);
@@ -169,16 +186,16 @@ html {
     margin-bottom: 15px;
     font-weight: 700;
 }
-#sec-0 article h2 span{
+#sec-0 article h2 span {
     color: var(--haccent);
 }
-#sec-0 article p{
+#sec-0 article p {
     color: var(--txtaccent);
     margin-bottom: 3rem;
     padding-left: 4rem;
     padding-right: 4rem;
 }
-#sec-0 article a{
+#sec-0 article a {
     color: var(--haccent2);
     background-color: var(--txtaccent4);
     display: inline-block;
@@ -189,10 +206,11 @@ html {
     text-transform: uppercase;
     font-weight: bold;
 }
-#sec-0 article a:hover{
+#sec-0 article a:hover {
     background-color: var(--haccent2);
     color: var(--txtaccent);
 }
+
 /* SECTION ONE */
 #sec-1 {
     background-color: var(--txtaccent);
@@ -227,6 +245,19 @@ html {
     display: inline-block;
     width: fit-content;
 }
+/* Initial state for the fade-in effect */
+#sec-1 article.fade-in {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly lower */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transition effect */
+}
+
+/* Final state for the fade-in effect */
+#sec-1 article.fade-in.show {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
 #sec-1 aside {
     width: 95%;
     margin: 25px auto 0px;
@@ -234,7 +265,45 @@ html {
 #sec-1 aside img{
     max-width: 100%;
 }
-
+#sec-1 .about h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    font-style: italic;
+    color: var(--haccent);
+    padding-bottom: 5px;
+    margin-bottom: 1rem;
+}
+#sec-1 .about h2 p {
+    color: var(--txtaccent1);
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+#sec-1 .about > p {
+    margin-bottom: 1.5rem;
+}
+#sec-1 .about a {
+    display: inline-flex;
+    padding: 5px;
+    width: 80px;
+    height: 80px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: var(--haccent);
+    font-size: 1.25rem;
+    color: var(--bgaccent);
+    justify-content: center;
+    align-items: center;
+    transition: background-color ease-in;
+    margin-top: 5px;
+    text-decoration: none;
+}
+#sec-1 .about i {
+    vertical-align: baseline;
+}
+#sec-1 .about a:hover {
+    background-color: var(--txtaccent5);
+}
 #sec-2{
     background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../Images/bg4.jpg) no-repeat center center/cover;
     text-align: center;
@@ -407,6 +476,7 @@ text-shadow:1px 1px #73757E;
     margin-bottom: 10px;
     width: 48%;
 }
+
 /* SECTION 5 */
 #sec-5{
     background: url(../Images/bg3.jpg) no-repeat center center/cover;
@@ -777,6 +847,7 @@ text-shadow:1px 1px #73757E;
         margin: 0px;
         text-align: right;
     }
+    
     #sec-2{
         padding: 4rem 0px 2.5rem;
     }
