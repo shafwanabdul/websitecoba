@@ -18,9 +18,9 @@ html {
     --textaccent3: #484848;
     --txtaccent4: #000;
     --txtaccent5: #E5E5E5;
-    --haccent: #FFCB0F;
-    --haccent_withOpacity: rgba(255, 203, 15,0.6);
-    --haccent2: #C79E23;
+    --haccent: #00AAD5;
+    --haccent_withOpacity: rgba(15, 199, 255, 0.6);
+    --haccent2: #00AAD5;
     --bgaccent: #1A1C27;
     --bgaccent_withOpacity: rgba(26, 28, 39,0.96);
 }
@@ -33,57 +33,7 @@ html {
 #sec-0{
     background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../Images/banner.jpg) no-repeat top center/cover;
 }
-#sec-0 header.top {
-    background-color: var(--haccent);
-    font-size: 0.85rem;
-    color: var(--txtaccent4);
-    padding-top: 6px;
-}
-#sec-0 header.top .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-#sec-0 header.top p {
-    display: flex;
-    width: 45%;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 0px;
-}
-#sec-0 header.top p:nth-of-type(2) {
-    justify-content: flex-end;
-}
-#sec-0 .top p::before{
-    font-family: fontAwesome;
-    display: inline-flex;
-    width: 2em;
-    justify-content: center;
-    font-size: 1.2em;
-}
-#sec-0 .top p:first-of-type::before{
-    content: "\f3cd";
-}
-#sec-0 .top p:nth-of-type(2)::before{
-    content: "\f0e0";
-}
-#sec-0 .top p:last-of-type::before{
-    content: "\f017";
-}
-#sec-0 .top .social {
-    display: flex;
-    width: 45%;
-    justify-content: flex-end;
-    gap: 5px;
-}
-#sec-0 .top .social a{
-    font-size: 1.2rem;
-    display: inline-block;
-    padding: 5px 0px 5px 5px;
-    color: inherit;
-    text-decoration: none;
-    transition: transform 0.3s ease-in-out;
-}
+
 #sec-0 .top .social a:hover{
     transform: scale(1.15);
 }
@@ -114,6 +64,12 @@ html {
 #sec-0 header:last-of-type h1>span{
     color: var(--txtaccent);
 }
+
+.logo img {
+    max-width: 80px; /* Adjust the value as needed */
+    height: auto;
+}
+
 #sec-0 header:last-of-type h1 p{
     font-size: 0.85rem;
     font-style: normal;
@@ -130,8 +86,9 @@ html {
     color: var(--txtaccent1);
     text-align: center;
     padding: 10px;
+    margin-top: -15px;
     transition: background-color 0.6s ease;
-    border-bottom: solid 1px var(--txtaccent1);
+    border-bottom: solid 0px var(--txtaccent1);
 }
 #sec-0 header nav a:hover{
     background-color: var(--haccent_withOpacity);
