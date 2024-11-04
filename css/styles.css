@@ -63,7 +63,7 @@ html {
     margin: 0px;
 }
 #sec-0 header:last-of-type h1>span{
-    color: var(--txtaccent);
+    color: var(--txtaccent1);
 }
 
 .logo img {
@@ -74,7 +74,7 @@ html {
 #sec-0 header:last-of-type h1 p{
     font-size: 0.85rem;
     font-style: normal;
-    color: var(--textaccent2);
+    color: var(--txtaccent1);
     margin: 0px;
 }
 #sec-0 header label{
@@ -84,7 +84,7 @@ html {
 #sec-0 header nav a {
     display: block;
     text-decoration: none;
-    color: var(--txtaccent1);
+    color: var(--txtaccent);
     text-align: center;
     padding: 10px;
     margin-top: -15px;

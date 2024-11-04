@@ -90,7 +90,7 @@ search.addEventListener('click', function (){
 
     // Add the "show" class on load for sec-0
     articleSec0.classList.add('show');
-    articleSec4.classList.add('show');
+    
 };
 
 window.onscroll = function() {
