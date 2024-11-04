@@ -84,21 +84,38 @@ search.addEventListener('click', function (){
             searchBar.classList.toggle('hide')    
          }
  } )
+ window.onload = function() {
+    const articleSec0 = document.querySelector('#sec-0 article.article-animate');
+    const articleSec4 = document.querySelector('#sec-4 article.article-animate');
 
-    window.onload = function() {
-        const article = document.querySelector('#sec-0 article.article-animate');
-        article.classList.add('show');
-    };
-    window.onscroll = function() {
-        const article = document.querySelector('#sec-0 article.article-animate');
-        const articlePosition = article.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.5;
-        if (articlePosition < screenPosition) {
-            article.classList.add('show');
-        }
+    // Add the "show" class on load for sec-0
+    articleSec0.classList.add('show');
+    articleSec4.classList.add('show');
+};
+
+window.onscroll = function() {
+    const articleSec0 = document.querySelector('#sec-0 article.article-animate');
+    const articleSec4 = document.querySelector('#sec-4 article.article-animate');
+
+    const articleSec0Position = articleSec0.getBoundingClientRect().top;
+    const articleSec4Position = articleSec4.getBoundingClientRect().top;
+
+    const screenPosition = window.innerHeight / 1.5;
+
+    // Check position for sec-0
+    if (articleSec0Position < screenPosition) {
+        articleSec0.classList.add('show');
     }
+
+    // Check position for sec-4
+    if (articleSec4Position < screenPosition) {
+        articleSec4.classList.add('show');
+    }
+};
 
     window.addEventListener("load", function() {
         const article = document.querySelector('#sec-1 article');
         article.classList.add('show'); // Trigger fade-in effect
     });
+
+    

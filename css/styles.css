@@ -477,6 +477,19 @@ text-shadow:1px 1px #73757E;
     width: 48%;
 }
 
+/* Initial state for the article */
+#sec-4 article.article-animate {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Move it slightly down */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transition effects */
+}
+
+/* Final state for the article */
+#sec-4 article.article-animate.show {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+}
+
 /* SECTION 5 */
 #sec-5{
     background: url(../Images/bg3.jpg) no-repeat center center/cover;
