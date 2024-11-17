@@ -18,9 +18,9 @@ html {
     --textaccent3: #484848;
     --txtaccent4: #000;
     --txtaccent5: #E5E5E5;
-    --haccent: #00AAD5;
-    --haccent_withOpacity: rgba(15, 199, 255, 0.6);
-    --haccent2: #00AAD5;
+    --haccent: #FFCB0F;
+    --haccent_withOpacity: rgba(255, 203, 15,0.6);
+    --haccent2: #C79E23;
     --bgaccent: #1A1C27;
     --bgaccent_withOpacity: rgba(26, 28, 39,0.96);
 }
@@ -29,12 +29,61 @@ html {
     margin: 0px auto;
     padding: 0px;
 }
-
 /* SECTION ZERO = LANDING VIEW */
 #sec-0{
     background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../Images/banner.jpg) no-repeat top center/cover;
 }
-
+#sec-0 header.top {
+    background-color: var(--haccent);
+    font-size: 0.85rem;
+    color: var(--txtaccent4);
+    padding-top: 6px;
+}
+#sec-0 header.top .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#sec-0 header.top p {
+    display: flex;
+    width: 45%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0px;
+}
+#sec-0 header.top p:nth-of-type(2) {
+    justify-content: flex-end;
+}
+#sec-0 .top p::before{
+    font-family: fontAwesome;
+    display: inline-flex;
+    width: 2em;
+    justify-content: center;
+    font-size: 1.2em;
+}
+#sec-0 .top p:first-of-type::before{
+    content: "\f3cd";
+}
+#sec-0 .top p:nth-of-type(2)::before{
+    content: "\f0e0";
+}
+#sec-0 .top p:last-of-type::before{
+    content: "\f017";
+}
+#sec-0 .top .social {
+    display: flex;
+    width: 45%;
+    justify-content: flex-end;
+    gap: 5px;
+}
+#sec-0 .top .social a{
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 5px 0px 5px 5px;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
 #sec-0 .top .social a:hover{
     transform: scale(1.15);
 }
@@ -63,18 +112,12 @@ html {
     margin: 0px;
 }
 #sec-0 header:last-of-type h1>span{
-    color: var(--txtaccent1);
+    color: var(--txtaccent);
 }
-
-.logo img {
-    max-width: 80px; /* Adjust the value as needed */
-    height: auto;
-}
-
 #sec-0 header:last-of-type h1 p{
     font-size: 0.85rem;
     font-style: normal;
-    color: var(--txtaccent1);
+    color: var(--textaccent2);
     margin: 0px;
 }
 #sec-0 header label{
@@ -84,12 +127,11 @@ html {
 #sec-0 header nav a {
     display: block;
     text-decoration: none;
-    color: var(--txtaccent);
+    color: var(--txtaccent1);
     text-align: center;
     padding: 10px;
-    margin-top: -15px;
     transition: background-color 0.6s ease;
-    border-bottom: solid 0px var(--txtaccent1);
+    border-bottom: solid 1px var(--txtaccent1);
 }
 #sec-0 header nav a:hover{
     background-color: var(--haccent_withOpacity);
@@ -150,35 +192,19 @@ html {
 #sec-0 input:checked + nav {
     display: block;
 }
-/* Add this CSS to your stylesheet */
-
-/* Initial state for the article */
-#sec-0 article.article-animate {
-    opacity: 0; /* Start invisible */
-    transform: translateY(20px); /* Move it slightly down */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transition effects */
-}
-
-/* Final state for the article */
-#sec-0 article.article-animate.show {
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Move to original position */
-}
-
-/* Your existing styles below */
-#sec-0 article {
+#sec-0 article{
     display: flex;
     align-items: center;
     text-align: center;
     padding: 3rem 0px;
 }
-#sec-0 article h1 {
+#sec-0 article h1{
     font-weight: normal;
     font-size: 1.25rem;
     color: var(--txtaccent);
     margin-bottom: 10px;
 }
-#sec-0 article h2 {
+#sec-0 article h2{
     text-transform: uppercase;
     font-size: 1.85rem;
     color: var(--txtaccent);
@@ -186,16 +212,16 @@ html {
     margin-bottom: 15px;
     font-weight: 700;
 }
-#sec-0 article h2 span {
+#sec-0 article h2 span{
     color: var(--haccent);
 }
-#sec-0 article p {
+#sec-0 article p{
     color: var(--txtaccent);
     margin-bottom: 3rem;
     padding-left: 4rem;
     padding-right: 4rem;
 }
-#sec-0 article a {
+#sec-0 article a{
     color: var(--haccent2);
     background-color: var(--txtaccent4);
     display: inline-block;
@@ -206,11 +232,10 @@ html {
     text-transform: uppercase;
     font-weight: bold;
 }
-#sec-0 article a:hover {
+#sec-0 article a:hover{
     background-color: var(--haccent2);
     color: var(--txtaccent);
 }
-
 /* SECTION ONE */
 #sec-1 {
     background-color: var(--txtaccent);
@@ -231,7 +256,7 @@ html {
     color: var(--textaccent3);
 }
 #sec-1 article p{
-    font-size: 1rem;
+    font-size: 0.85rem;
     text-align: justify;
     margin: 1.3rem 0px 1.1rem;
 }
@@ -245,19 +270,6 @@ html {
     display: inline-block;
     width: fit-content;
 }
-/* Initial state for the fade-in effect */
-#sec-1 article.fade-in {
-    opacity: 0; /* Start invisible */
-    transform: translateY(20px); /* Start slightly lower */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transition effect */
-}
-
-/* Final state for the fade-in effect */
-#sec-1 article.fade-in.show {
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Move to original position */
-}
-
 #sec-1 aside {
     width: 95%;
     margin: 25px auto 0px;
@@ -265,45 +277,7 @@ html {
 #sec-1 aside img{
     max-width: 100%;
 }
-#sec-1 .about h2 {
-    font-size: 1.3rem;
-    font-weight: 800;
-    font-style: italic;
-    color: var(--haccent);
-    padding-bottom: 5px;
-    margin-bottom: 1rem;
-}
-#sec-1 .about h2 p {
-    color: var(--txtaccent1);
-    font-size: 0.8rem;
-    font-weight: 400;
-    margin-bottom: 0px;
-}
-#sec-1 .about > p {
-    margin-bottom: 1.5rem;
-}
-#sec-1 .about a {
-    display: inline-flex;
-    padding: 5px;
-    width: 80px;
-    height: 80px;
-    margin-right: 5px;
-    border-radius: 50%;
-    background-color: var(--haccent);
-    font-size: 1.25rem;
-    color: var(--bgaccent);
-    justify-content: center;
-    align-items: center;
-    transition: background-color ease-in;
-    margin-top: 5px;
-    text-decoration: none;
-}
-#sec-1 .about i {
-    vertical-align: baseline;
-}
-#sec-1 .about a:hover {
-    background-color: var(--txtaccent5);
-}
+
 #sec-2{
     background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../Images/bg4.jpg) no-repeat center center/cover;
     text-align: center;
@@ -476,20 +450,6 @@ text-shadow:1px 1px #73757E;
     margin-bottom: 10px;
     width: 48%;
 }
-
-/* Initial state for the article */
-#sec-4 article.article-animate {
-    opacity: 0; /* Start invisible */
-    transform: translateY(20px); /* Move it slightly down */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transition effects */
-}
-
-/* Final state for the article */
-#sec-4 article.article-animate.show {
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Move to original position */
-}
-
 /* SECTION 5 */
 #sec-5{
     background: url(../Images/bg3.jpg) no-repeat center center/cover;
@@ -860,7 +820,6 @@ text-shadow:1px 1px #73757E;
         margin: 0px;
         text-align: right;
     }
-    
     #sec-2{
         padding: 4rem 0px 2.5rem;
     }
